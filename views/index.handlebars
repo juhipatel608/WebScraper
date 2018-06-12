@@ -1,0 +1,31 @@
+<header>
+	<nav class="blue-grey darken-2" role="navigation">
+	  	<div class="nav-wrapper">
+		    <a  id="main-container"  class="left"> 
+			    	<span id="scraped"> NPR Technology Scraper </span>
+		    </a>
+	
+		    <ul id="nav" class="right ">
+		    	<li><a href="/"> Home </a></li>
+		        <li><a href="/saved"> Saved </a></li>  
+		    </ul>
+	  	</div>
+	</nav>
+</header>
+
+<div class="container">
+	<div class="row">
+
+		{{#if current}}
+			{{> current_articles }}
+		{{/if}}
+
+		{{#if saved}}		
+			{{> saved_articles }}
+		{{/if}}
+		
+	</div>
+</div>
+
+
+

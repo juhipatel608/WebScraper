@@ -1,0 +1,36 @@
+<div id="articlesSection" >
+	<span id="articlesTitle"> These are the most recent technology stories. </span>
+	<div id="articlesDiv">
+
+		{{#if articles}}
+
+			{{#each articles}}
+				<div id="{{this.id}}">
+				    <div class="card horizontal">
+				        <div class="card-image">
+				        	<img src="{{this.img}}">
+				     	</div>
+					    <div class="card-stacked">
+							<div class="card-content">
+								<p class="article-title">{{{this.title}}}</p>
+								<p class="source">{{{this.source}}} -- </p>
+								<span class="teaser">{{this.teaser}}</span>
+							</div>
+							<div id="test" class="card-action">
+					    	    <a class="link text-darken" href="{{this.link}}" target="_blank">Read</a>
+					    	    <a data-id="{{this.id}}" class="notes text-darken">Notes</a>
+					    	    <a data-id="{{this.id}}" class="saveArticle text-darken" href="/saved" >Save</a>
+					    	</div>
+						</div>
+					</div>
+				</div>
+			{{/each}}
+
+		{{else}}
+
+			<p class="text-center"> There are no current articles to display. </p>
+			    
+		{{/if}}
+
+	</div>
+</div>
